@@ -3,8 +3,8 @@ const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 const { isEmail } = require("validator");
 const Task = require("./task");
- 
-const secret = process.env.jwt_secret;
+
+const secret = process.env.JWT_SECRET;
 
 const userSchema = new mongoose.Schema(
     {
