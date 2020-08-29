@@ -13,6 +13,6 @@ app.get("/", (req, res) => {
     res.send({ success: true, name: "Tasks API" });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log("tasks api is running on port " + PORT + ".");
 });
