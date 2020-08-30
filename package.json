@@ -4,9 +4,12 @@
     "description": "express and mongoDB tasks app for udemy course",
     "main": "index.js",
     "scripts": {
-        "dev": "env-cmd -f config/dev.env nodemon src/app.js",
-        "start": "node src/app.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "env-cmd -f config/dev.env nodemon src/index.js",
+        "start": "node src/index.js",
+        "test": "env-cmd -f ./config/test.env jest --watch --runInBand"
+    },
+    "jest": {
+        "testEnvironment": "node"
     },
     "author": "ken maready",
     "license": "ISC",
@@ -23,6 +26,8 @@
     },
     "devDependencies": {
         "env-cmd": "^10.1.0",
-        "nodemon": "^2.0.4"
+        "jest": "^26.4.2",
+        "nodemon": "^2.0.4",
+        "supertest": "^3.4.1"
     }
 }

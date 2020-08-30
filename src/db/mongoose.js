@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const dbUrl = process.env.MONGODB_URL;
 
-const databaseName = "tasks";
+const databaseName = process.env.DB_NAME;
 console.log(dbUrl);
 
 mongoose.connect(dbUrl + "/" + databaseName, {
